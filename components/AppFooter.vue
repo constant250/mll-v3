@@ -1,5 +1,8 @@
 <template>
-  <footer class="footer">
+  <footer 
+    ref="elementRef"
+    :class="['footer', 'animate-on-scroll', 'fade-in-up', { 'visible': isVisible }]"
+  >
     <div class="footer-container">
       <div class="footer-logo">
         <NuxtImg src="/images/MLL - LOGO - WEB.png" alt="MLL Melbourne Legal Lawyers" class="footer-logo-img" />
@@ -40,4 +43,7 @@
   </footer>
 </template>
 
+<script setup lang="ts">
+const { isVisible, elementRef } = useAnimateOnScroll()
+</script>
 

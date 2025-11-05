@@ -1,7 +1,13 @@
 <template>
   <section id="services" class="services-section">
-    <h2 class="section-title">Our Services</h2>
-    <div class="services-grid">
+    <h2 
+      ref="titleRef"
+      :class="['section-title', 'animate-on-scroll', 'fade-in-up', { 'visible': isTitleVisible }]"
+    >Our Services</h2>
+    <div 
+      ref="elementRef"
+      :class="['services-grid', 'animate-stagger', { 'visible': isVisible }]"
+    >
       <ServiceCard
         title="Family Law"
         description="From parenting plans to property settlements, we handle sensitive family matters with empathy and skill."
@@ -31,7 +37,8 @@
 </template>
 
 <script setup lang="ts">
-
+const { isVisible: isTitleVisible, elementRef: titleRef } = useAnimateOnScroll()
+const { isVisible, elementRef } = useAnimateOnScroll()
 </script>
 
 <style scoped>

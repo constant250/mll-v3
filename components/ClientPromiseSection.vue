@@ -1,6 +1,9 @@
 <template>
-  <section id="client-promise" class="client-promise-section">
-    <div class="client-promise-container">
+  <section class="client-promise-section">
+    <div 
+      ref="elementRef"
+      :class="['client-promise-container', 'animate-on-scroll', 'fade-in-up', { 'visible': isVisible }]"
+    >
       <div class="client-promise-image">
         <NuxtImg src="/images/LADY.png" alt="Professional lawyer" class="lady-image" />
       </div>
@@ -50,6 +53,6 @@
 </template>
 
 <script setup lang="ts">
-
+const { isVisible, elementRef } = useAnimateOnScroll()
 </script>
 

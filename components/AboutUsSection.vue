@@ -1,6 +1,9 @@
 <template>
   <section id="about" class="about-section">
-    <div class="about-container">
+    <div 
+      ref="elementRef"
+      :class="['about-container', 'animate-on-scroll', 'fade-in-up', { 'visible': isVisible }]"
+    >
       <div class="about-content">
         <NuxtImg src="/images/MLL - LOGO - WEB.png" alt="MLL Melbourne Legal Lawyers" class="about-logo" />
         <p class="about-text">
@@ -18,6 +21,6 @@
 </template>
 
 <script setup lang="ts">
-
+const { isVisible, elementRef } = useAnimateOnScroll()
 </script>
 

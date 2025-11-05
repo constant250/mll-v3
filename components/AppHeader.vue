@@ -1,5 +1,8 @@
 <template>
-  <header :class="['header', { 'scrolled': isScrolled }]">
+  <header 
+    ref="elementRef"
+    :class="['header', { 'scrolled': isScrolled }, 'animate-on-scroll', 'fade-in', { 'visible': isVisible }]"
+  >
     <nav class="header-nav">
       <div class="header-logo">
         <a href="#top">
@@ -25,6 +28,8 @@
 </template>
 
 <script setup lang="ts">
+const { isVisible, elementRef } = useAnimateOnScroll()
+
 // @ts-ignore - Nuxt auto-imports
 const activeSection = ref('')
 // @ts-ignore - Nuxt auto-imports
@@ -32,6 +37,9 @@ const isScrolled = ref(false)
 
 // @ts-ignore - Nuxt auto-imports
 onMounted(() => {
+  // Header should animate immediately on load, not on scroll
+  isVisible.value = true
+  
   const handleScroll = () => {
     isScrolled.value = window.scrollY > 50
   }

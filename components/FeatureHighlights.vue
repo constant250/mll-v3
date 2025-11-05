@@ -1,5 +1,8 @@
 <template>
-  <section class="feature-highlights">
+  <section 
+    ref="elementRef"
+    :class="['feature-highlights', 'animate-stagger', { 'visible': isVisible }]"
+  >
     <div class="feature-box">
       <NuxtImg src="/images/ICON-1.png" alt="Fast consultation" class="feature-icon" />
       <p>Fast legal consultation <br>and response times</p>
@@ -16,6 +19,6 @@
 </template>
 
 <script setup lang="ts">
-
+const { isVisible, elementRef } = useAnimateOnScroll()
 </script>
 

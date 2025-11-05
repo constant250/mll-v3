@@ -1,15 +1,14 @@
 <template>
-  <div>
-    <AppHeader />
+  <div id="top" >
+    <AppHeader/>
     <div 
-      id="top" 
       class="landing-page" 
     >
       <HeroSection />
       <FeatureHighlights />
       <AboutUsSection />
       <OurServicesSection />
-      <ClientPromiseSection />
+      <ClientPromiseSection id="client-promise" />
       <ContactUsSection />
       <AppFooter />
     </div>

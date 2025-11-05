@@ -1,10 +1,8 @@
 <template>
 	<div :class="{ mac: isMac, 'windows-os': isWindows }">
-		<!-- <Header :class="{ home: isHome }" /> -->
 		<main role="main">
 			<slot />
 		</main>
-		<!-- <Footer /> -->
 	</div>
 </template>
 

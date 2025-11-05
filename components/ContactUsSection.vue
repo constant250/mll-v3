@@ -1,7 +1,13 @@
 <template>
   <section id="contact" :class="'contact-section'">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="contact-container">
+    <h2 
+      ref="titleRef"
+      :class="['section-title', 'animate-on-scroll', 'fade-in-up', { 'visible': isTitleVisible }]"
+    >Contact Us</h2>
+    <div 
+      ref="elementRef"
+      :class="['contact-container', 'animate-on-scroll', 'fade-in-up', { 'visible': isVisible }]"
+    >
       <div class="contact-form-container">
         <p class="contact-intro">
           Ready to discuss your legal matter? We're here to help with clear, practical advice.
@@ -91,7 +97,6 @@
             Hours: Mon-Fri 9am-5pm
           </p>
         </div>
-        <!-- <p class="office-hours">Hours: Mon-Fri 9am-5pm</p> -->
         <div class="office-contact">
           <a href="tel:+61312345678" class="office-contact-item">
             <NuxtImg src="/images/CALL ICON.png" alt="Phone" class="office-contact-icon" />
@@ -112,7 +117,6 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-          <!-- <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
         </div>
       </div>
     </div>
@@ -120,6 +124,9 @@
 </template>
 
 <script setup>
+
+const { isVisible: isTitleVisible, elementRef: titleRef } = useAnimateOnScroll()
+const { isVisible, elementRef } = useAnimateOnScroll()
 
 const form = ref({
   fullName: '',
