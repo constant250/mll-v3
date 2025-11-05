@@ -1,0 +1,85 @@
+/**
+::  Colors
+ */
+
+$color-1: #1c1e25;
+$color-2: #fff;
+$color-2-hover: #f4f5f9;
+$color-3: #008afc;
+$color-4: #ededed;
+$color-5: #5e82a6;
+$color-6: #0f2f4a;
+
+/**
+::  Breakpoints
+ */
+
+$tiny: 350px;
+$tinyish: 390px;
+$small: 450px;
+$smallish: 600px;
+$medium: 769px;
+$mediumer: 850px;
+$mediumish: 1025px;
+$large: 1160px;
+$largeish: 1280px;
+$huge: 1440px;
+$bigmac: 1920px;
+
+// Bootstrap breakpoints
+
+$boot-sm: 576px;
+$boot-md: 769px;
+$boot-md-slightly-larger: 834px;
+$boot-lg: 992px;
+$boot-xl: 1200px;
+$boot-custom: 1363px;
+$boot-xxl: 1400px;
+
+$grid-gutter-width: 10px;
+
+/**
+:: Font Weights
+ */
+
+$w300: 300;
+$w400: 400;
+$w500: 500;
+$w600: 600;
+$w700: 700;
+$w800: 800;
+$w900: 900;
+
+/**
+:: Font Weight Mixins
+ */
+
+@mixin font-weight-400 {
+	font-weight: $w400;
+
+	.mac & {
+		font-weight: $w300;
+	}
+}
+
+@mixin font-weight-500 {
+	font-weight: $w500;
+
+	.mac & {
+		font-weight: $w500;
+		// font-weight: $w400;
+	}
+}
+
+@mixin font-weight-600 {
+	font-weight: $w600;
+
+	.mac & {
+		font-weight: $w500;
+	}
+}
+
+$font-family1: "Montserrat", sans-serif;
+$font-family2: "Poppins", sans-serif;
+
+$generic-transition: all 200ms linear;

@@ -1,0 +1,37 @@
+.terms {
+	padding: 60px 0 100px;
+	@media (max-width: $boot-md) {
+		padding: 40px 0 60px;
+	}
+	.container {
+		@media (min-width: $boot-md) {
+			max-width: 876px;
+		}
+	}
+	.title-section {
+		.section-title {
+			padding: 0 0 60px;
+			margin: 0 0 60px;
+
+			border-bottom: 1px solid #ced4da;
+
+			@media (max-width: $boot-md) {
+				padding: 0 0 40px;
+				margin: 0 0 40px;
+			}
+		}
+	}
+	.content-section {
+		.wysiwyg {
+			p {
+				font-weight: $w400;
+				color: $color-1;
+				font-size: 14px;
+				line-height: 24px;
+			}
+			strong {
+				font-weight: $w700;
+			}
+		}
+	}
+}

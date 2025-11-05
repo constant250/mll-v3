@@ -1,0 +1,94 @@
+.home {
+	background-color: #fff;
+
+	.about-section {
+		margin-top: 100px;
+
+		@media (max-width: $boot-md) {
+			margin-top: 50px;
+		}
+
+		.about-ctr {
+			border-radius: 12px;
+			background: #f4f5f9;
+			padding: 60px 24px;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 40px;
+
+			.wysiwyg {
+				max-width: 720px;
+				p {
+					text-align: center;
+
+					color: #1c1e25;
+					text-align: center;
+					font-size: 18px;
+					font-weight: $w400;
+					line-height: 26px;
+
+					&:not(:last-child) {
+						margin-bottom: 16px;
+					}
+
+					@media (max-width: $boot-md) {
+						font-size: 15px;
+						line-height: 24px;
+					}
+				}
+			}
+
+			.buttons-ctr {
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+				justify-content: center;
+
+				@media (max-width: $boot-md) {
+					flex-direction: column;
+					gap: 12px;
+				}
+			}
+
+			@media (max-width: $boot-md) {
+				gap: 24px;
+				padding: 40px 24px;
+			}
+		}
+	}
+
+	.forms-section {
+		padding: 60px 0 100px;
+
+		.container {
+			@media (min-width: $boot-md) {
+				max-width: 656px;
+			}
+		}
+
+		@media (max-width: $boot-md) {
+			padding: 40px 0 60px;
+		}
+
+		.header-ctr {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 16px;
+			margin-bottom: 40px;
+
+			img {
+				width: 40px;
+				height: 40px;
+			}
+
+			.section-title {
+				margin: 0;
+			}
+		}
+	}
+}

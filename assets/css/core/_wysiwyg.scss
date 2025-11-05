@@ -1,0 +1,90 @@
+.wysiwyg {
+	h1,
+	h2,
+	h3 {
+		color: $color-3;
+	}
+
+	h4,
+	h5,
+	h6,
+	.body-large,
+	.body-small {
+		color: $color-1;
+	}
+
+	p {
+		color: $color-6;
+		font-size: 16px;
+		font-weight: $w400;
+		line-height: 24px;
+		margin-bottom: 0;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	ul,
+	ol {
+		padding: 0;
+		margin: 0 0 16px;
+		padding-left: 0;
+
+		li {
+			color: $color-1;
+			font-family: $font-family1;
+			font-size: 14px;
+			font-weight: $w400;
+			line-height: 24px;
+			list-style: none;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		object-position: center;
+		margin-bottom: 16px;
+	}
+
+	iframe {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	a {
+		text-decoration: underline;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	blockquote {
+		padding: 24px;
+		border-radius: 8px;
+		background: $color-4;
+		margin: 8px 0 40px;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	table {
+		margin-bottom: 16px;
+		tbody,
+		tfoot,
+		td,
+		th,
+		thead,
+		tr {
+			border: 1px solid;
+		}
+	}
+}

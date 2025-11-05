@@ -1,0 +1,82 @@
+.button {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	text-decoration: none;
+	border-radius: 60px;
+	transition: $generic-transition;
+	cursor: pointer;
+
+	padding: 12px 20px 14px;
+	font-family: $font-family1;
+	font-size: 16px;
+	font-weight: $w500;
+	line-height: normal;
+
+	svg {
+		transition: all 0.3s ease-in-out;
+		transform: translateX(0);
+	}
+
+	&:hover {
+		svg {
+			transform: translateX(3px);
+		}
+	}
+
+	&.black {
+		background: $color-1;
+		color: #fff;
+
+		svg {
+			path {
+				fill: #fff;
+			}
+		}
+
+		&:hover {
+			background: #fff;
+			color: $color-1;
+
+			svg {
+				path {
+					fill: $color-1;
+				}
+			}
+		}
+	}
+
+	&.white {
+		background: #fff;
+		color: $color-1;
+
+		svg {
+			path {
+				transition: $generic-transition;
+				fill: $color-1;
+			}
+			rect {
+				transition: $generic-transition;
+				stroke: $color-1;
+			}
+		}
+
+		&:hover {
+			background: $color-1;
+			color: #fff;
+
+			svg {
+				path {
+					transition: $generic-transition;
+					fill: #fff;
+				}
+				rect {
+					transition: $generic-transition;
+					stroke: #fff;
+				}
+			}
+		}
+	}
+}

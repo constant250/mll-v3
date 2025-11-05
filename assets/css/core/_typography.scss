@@ -1,0 +1,87 @@
+// Typography Mixins
+@mixin heading-1 {
+	font-family: $font-family1;
+	font-size: 40px;
+	font-weight: $w600;
+	line-height: normal;
+	letter-spacing: -1.2px;
+	text-align: center;
+
+	@media (max-width: $boot-md) {
+		font-size: 30px;
+		letter-spacing: -0.9px;
+	}
+}
+
+@mixin heading-2 {
+	font-family: $font-family1;
+	text-align: center;
+	font-size: 30px;
+	font-weight: $w600;
+	line-height: normal;
+	letter-spacing: -0.9px;
+
+	@media (max-width: $boot-md) {
+		font-size: 22px;
+		letter-spacing: -0.66px;
+	}
+}
+
+@mixin heading-3 {
+	font-family: $font-family1;
+	text-align: center;
+	font-size: 18px;
+	font-weight: $w400;
+	line-height: 26px;
+
+	@media (max-width: $boot-md) {
+		font-size: 15px;
+		line-height: 24px;
+	}
+}
+
+@mixin body-large {
+	font-family: $font-family1;
+	font-size: 18px;
+	font-weight: $w500;
+	line-height: 26px;
+	letter-spacing: -0.36px;
+
+	@media (max-width: $boot-md) {
+		font-size: 16px;
+		font-weight: $w500;
+		line-height: 26px;
+		letter-spacing: -0.32px;
+	}
+}
+
+@mixin body-small {
+	font-family: $font-family1;
+	color: #1c1e25;
+	font-size: 14px;
+	font-weight: $w400;
+	line-height: 24px;
+}
+
+h1,
+.h1 {
+	@include heading-1;
+}
+
+h2,
+.h2 {
+	@include heading-2;
+}
+
+h3,
+.h3 {
+	@include heading-3;
+}
+
+.body-large {
+	@include body-large;
+}
+
+.body-small {
+	@include body-small;
+}

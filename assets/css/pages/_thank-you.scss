@@ -1,0 +1,44 @@
+.thank-you {
+	height: 71vh;
+	.content-ctr {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		@media (min-width: $boot-md) {
+			max-width: 690px;
+			margin: 78px 0;
+		}
+
+		img {
+			width: 54px;
+			height: 52px;
+			margin-bottom: 16px;
+		}
+
+		.section-title {
+			margin: 0 0 16px;
+			text-align: center;
+
+			color: $color-1;
+			font-size: 30px;
+			font-weight: $w600;
+			line-height: normal;
+			letter-spacing: -0.9px;
+
+			@media (max-width: $boot-md) {
+				font-size: 22px;
+				letter-spacing: -0.66px;
+			}
+		}
+
+		.body-large {
+			text-align: center;
+			color: $color-1;
+
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+}

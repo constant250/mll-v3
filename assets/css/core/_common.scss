@@ -1,0 +1,41 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+* {
+	transition: all 0.3s ease;
+}
+
+#__nuxt {
+	overflow-x: hidden;
+}
+
+.disableScroll {
+	overflow-y: hidden;
+}
+
+.container {
+	max-width: 1290px;
+}
+
+a {
+	color: $color-1;
+	text-decoration: none;
+}
+
+div,
+ul,
+li,
+p {
+	font-family: $font-family1;
+	font-weight: $w400;
+	font-size: 16px;
+	color: $color-6;
+}
