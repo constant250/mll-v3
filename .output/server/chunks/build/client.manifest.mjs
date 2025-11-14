@@ -11,34 +11,52 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "C51wlBvn.js",
+    "file": "Crj33jKr.js",
     "name": "default",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [
+      "swiper-vue.C8kddlLw.css"
     ]
+  },
+  "swiper-vue.C8kddlLw.css": {
+    "file": "swiper-vue.C8kddlLw.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
   },
   "node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DyvpLcMq.js",
+    "file": "BSgqleGk.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
     "dynamicImports": [
       "layouts/default.vue"
     ],
-    "_globalCSS": true
+    "css": [
+      "entry.BP6C9Os3.css",
+      "swiper-vue.C8kddlLw.css"
+    ]
+  },
+  "entry.BP6C9Os3.css": {
+    "file": "entry.BP6C9Os3.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
   },
   "pages/index.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "utvIYBW4.js",
+    "file": "DL3CWBYQ.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
@@ -46,7 +64,8 @@ const client_manifest = {
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": [
-      "index.D6Gd51LL.css"
+      "index.D6Gd51LL.css",
+      "swiper-vue.C8kddlLw.css"
     ]
   },
   "index.D6Gd51LL.css": {

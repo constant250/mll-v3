@@ -82,6 +82,8 @@ export default defineNuxtConfig({
     },
   },
 
+  ssr: false,        // Disable SSR
+
   runtimeConfig: {
     public: {
       // WEBSITE_URL: process.env.WEBSITE_URL,
