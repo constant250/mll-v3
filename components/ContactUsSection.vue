@@ -127,6 +127,7 @@
 
 const { isVisible: isTitleVisible, elementRef: titleRef } = useAnimateOnScroll()
 const { isVisible, elementRef } = useAnimateOnScroll()
+const { success, error } = useToast()
 
 const form = ref({
   fullName: '',
@@ -231,7 +232,7 @@ const handleSubmit = async () => {
   // Validate all fields before submission
   if (!validateForm()) {
     console.log('Form validation failed', errors.value)
-    alert('Please fix the errors in the form')
+    error('Please fix the errors in the form')
     return
   }
 
@@ -245,12 +246,12 @@ const handleSubmit = async () => {
     console.log('Form submitted:', form.value)
     
     // Send email via API
-    // const response = await $fetch('/api/send-contact-email', {
-    //   method: 'POST',
-    //   body: form.value
-    // })
+    const response = await $fetch('/api/send-contact-email', {
+      method: 'POST',
+      body: form.value
+    })
     
-    // console.log('Email sent successfully:', response)
+    console.log('Email sent successfully:', response)
     
     // Reset form after successful submission
     form.value = {
@@ -262,11 +263,11 @@ const handleSubmit = async () => {
     }
     errors.value = {}
     
-    alert('Thank you for your inquiry! We will get back to you soon.')
-  } catch (error) {
-    console.error('Form submission error:', error)
-    const errorMessage = error?.data?.message || error?.message || 'An error occurred. Please try again later.'
-    alert(errorMessage)
+    success('Thank you for your inquiry! We will get back to you soon.')
+  } catch (err) {
+    console.error('Form submission error:', err)
+    const errorMessage = err?.data?.message || err?.message || 'An error occurred. Please try again later.'
+    error(errorMessage)
   } finally {
     isSubmitting.value = false
   }

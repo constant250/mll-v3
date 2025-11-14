@@ -84,12 +84,20 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      WEBSITE_URL: process.env.WEBSITE_URL,
-      FILE_URL: process.env.FILE_URL,
-      CMS_URL: process.env.CMS_URL,
+      // WEBSITE_URL: process.env.WEBSITE_URL,
+      // FILE_URL: process.env.FILE_URL,
+      // CMS_URL: process.env.CMS_URL,
     },
     private: {
-      FILE_URL: process.env.FILE_URL,
+      // FILE_URL: process.env.FILE_URL,
+      smtpHost: process.env.SMTP_HOST,
+      smtpPort: process.env.SMTP_PORT,
+      smtpSecure: process.env.SMTP_SECURE,
+      smtpUser: process.env.SMTP_USER,
+      smtpPassword: process.env.SMTP_PASSWORD,
+      contactEmail: process.env.CONTACT_EMAIL,
+      sendConfirmationEmail: process.env.SEND_CONFIRMATION_EMAIL || 'false',
+      smtpRejectUnauthorized: process.env.SMTP_REJECT_UNAUTHORIZED || 'true',
     }
   },
 })
