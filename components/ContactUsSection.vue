@@ -244,14 +244,13 @@ const handleSubmit = async () => {
     isSubmitting.value = true
     console.log('Form submitted:', form.value)
     
-    // Simulate API call - replace with actual API call
-    // await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    // You can add API call here
-    // const response = await $fetch('/api/contact', {
+    // Send email via API
+    // const response = await $fetch('/api/send-contact-email', {
     //   method: 'POST',
     //   body: form.value
     // })
+    
+    // console.log('Email sent successfully:', response)
     
     // Reset form after successful submission
     form.value = {
@@ -266,7 +265,8 @@ const handleSubmit = async () => {
     alert('Thank you for your inquiry! We will get back to you soon.')
   } catch (error) {
     console.error('Form submission error:', error)
-    alert('An error occurred. Please try again later.')
+    const errorMessage = error?.data?.message || error?.message || 'An error occurred. Please try again later.'
+    alert(errorMessage)
   } finally {
     isSubmitting.value = false
   }
@@ -277,6 +277,12 @@ const handleSubmit = async () => {
 <style scoped>
   .section-title {
     padding-left: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      padding-left: 0;
+    }
   }
 </style>
 
